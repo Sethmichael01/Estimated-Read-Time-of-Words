@@ -18,6 +18,7 @@ namespace win
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox textBox1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -44,6 +45,7 @@ namespace win
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// richTextBox1
@@ -87,6 +89,14 @@ namespace win
 			this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.textBox2.TextChanged += new System.EventHandler(this.TextBox2TextChanged);
 			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(160, 110);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(55, 20);
+			this.textBox1.TabIndex = 7;
+			this.textBox1.TextChanged += new System.EventHandler(this.TextBox1TextChanged);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -97,6 +107,7 @@ namespace win
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.richTextBox1);
+			this.Controls.Add(this.textBox1);
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "WordCountTime";

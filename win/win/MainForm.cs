@@ -33,8 +33,10 @@ namespace win
 		
 		void Button1Click(object sender, EventArgs e)
 		{
-			char[] arr = new char[]{'A','B','C','D', 'E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-			if(richTextBox1.Text.Length >0){
+			if(richTextBox1.Text.Length >=1){
+				textBox1.Text=richTextBox1.Text.Replace(" ","");
+				textBox1.Text=richTextBox1.Text.Replace(".","");
+				textBox1.Text=richTextBox1.Text.Replace(",","");
 				textBox2.Text= Convert.ToString(richTextBox1.Text.Length);
 				double TextLength = Convert.ToDouble(richTextBox1.Text.Length)/200;
 				int Minute = (int)TextLength;
@@ -44,21 +46,24 @@ namespace win
            		double _finalsec = Convert.ToDouble(_ans.ToString().Split('.')[1]);
            		if (_finalsec < 30)
             		{
-           			textBox2.Text=""+richTextBox1.TextLength+" Words. Estimated Read Time "+Minute+" Minute(s).";
-           			//Console.WriteLine("{0} Words = a {1} Minute(s).", Text.Length, Minute);
+           			textBox2.Text=""+textBox1.TextLength+" Words. Estimated Read Time "+Minute+" Minute(s).";     
            		}           		
-           		else
+           		else if(_finalsec >=30){
            			Minute += 1;
-           		textBox2.Text=""+richTextBox1.TextLength+" Words. Estimated Read Time "+Minute+" Minute(s).";
-           		//Console.WriteLine("{0} Words = a {1} Minute(s).", Text.Length, Minute);
+           			textBox2.Text=""+textBox1.TextLength+" Words. Estimated Read Time "+Minute+" Minute(s).";
+           		}
+           			
 			}
-			else
-				textBox2.Text= Convert.ToString(richTextBox1.Text.Length);
+			else if(richTextBox1.Text.Length<1){
+				MessageBox.Show("Cannot Count an Empty Word!");
+			}
+	
 		}
 		void Button2Click(object sender, EventArgs e)
 		{
 			richTextBox1.Clear();
 			textBox2.Clear();
+			textBox1.Clear();
 		}
 		void Label1Click(object sender, EventArgs e)
 		{
@@ -66,9 +71,17 @@ namespace win
 		}
 		void TextBox2TextChanged(object sender, EventArgs e)
 		{
-
+			//richTextBox1.Text = richTextBox1.Text.Replace(" ","");
 		}
 		void MainFormLoad(object sender, EventArgs e)
+		{
+	
+		}
+		void Button3Click(object sender, EventArgs e)
+		{
+	
+		}
+		void TextBox1TextChanged(object sender, EventArgs e)
 		{
 	
 		}
