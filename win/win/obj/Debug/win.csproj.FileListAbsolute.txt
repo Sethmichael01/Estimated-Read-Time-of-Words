@@ -1,0 +1,8 @@
+C:\Users\sethm\Documents\SharpDevelop Projects\win\win\bin\Debug\win.exe.config
+C:\Users\sethm\Documents\SharpDevelop Projects\win\win\bin\Debug\win.exe
+C:\Users\sethm\Documents\SharpDevelop Projects\win\win\bin\Debug\win.pdb
+C:\Users\sethm\Documents\SharpDevelop Projects\win\win\obj\Debug\win.csprojResolveAssemblyReference.cache
+C:\Users\sethm\Documents\SharpDevelop Projects\win\win\obj\Debug\win.MainForm.resources
+C:\Users\sethm\Documents\SharpDevelop Projects\win\win\obj\Debug\win.csproj.GenerateResource.Cache
+C:\Users\sethm\Documents\SharpDevelop Projects\win\win\obj\Debug\win.exe
+C:\Users\sethm\Documents\SharpDevelop Projects\win\win\obj\Debug\win.pdb
